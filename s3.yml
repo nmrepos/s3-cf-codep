@@ -17,6 +17,13 @@ Resources:
       BucketName: !Ref BucketName
       VersioningConfiguration:
         Status: !Ref VersioningState
+      Tags:
+        - Key: Name
+          Value: !Ref BucketName
+        - Key: Environment
+          Value: Production
+        - Key: Owner
+          Value: alice@example.com
 
 Outputs:
   BucketName:
